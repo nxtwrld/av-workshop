@@ -1,7 +1,7 @@
 import Ractive from 'ractive';
 
 
-
+/*
 fetch('mockdata/devices.json', {
   method: 'get',
   headers: {
@@ -19,7 +19,7 @@ console.log(r);
 console.log(r);
 
 })
-
+*/
 
 export default Ractive.extend({
   template : '<p>list</p>',

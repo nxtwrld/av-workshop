@@ -5,9 +5,11 @@ import layoutHtml from './html/index.html';
 import fetch_shim from 'whatwg-fetch';
 import list from './views/list.js';
 import index from './views/index.js';
+import events from './libs/events.js';
 
 // register router
 const router = wayfarer(window.location.hash);
+
 
 // listen to hash changes
 window.addEventListener('hashchange', () => {
