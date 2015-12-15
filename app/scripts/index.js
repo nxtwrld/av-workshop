@@ -14,10 +14,6 @@ window.addEventListener('hashchange', () => {
 	router(match(window.location.hash));
 });
 
-console.log("Avast Workshop - Ractive loaded");
-
-let App = {};
-
 Ractive.prototype.data = {
 	getComponent: function(name){
 		if (!!this.partials[name]) return name;
@@ -26,7 +22,7 @@ Ractive.prototype.data = {
 	}
 };
 
-let r = new Ractive({
+export default new Ractive({
   el : "#app",
   template : layoutHtml,
   components : {
@@ -48,7 +44,3 @@ let r = new Ractive({
 
   }
 });
-
-
-
-export default App;

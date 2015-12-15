@@ -11,13 +11,6 @@ module.exports.getConfig = function(type) {
       filename: 'index.js'
     },
     debug : isDev,
-    node: {
-      net: "empty",
-      tls: "empty",
-      fs: "empty",
-      file: "empty",
-      directory: "empty"
-    },
     module: {
       loaders: [
         {
@@ -38,7 +31,12 @@ module.exports.getConfig = function(type) {
           loader : 'json'
         }
       ]
-    }
+    },
+    plugins : [
+      //new webpack.DefinePlugin({ __VERSION__: JSON.stringify(grunt.file.readJSON('package.json').version) }),
+      //new webpack.optimize.DedupePlugin(),
+      //new webpack.optimize.UglifyJsPlugin()
+    ]
   };
 
   if(isDev){
