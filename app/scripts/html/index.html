@@ -1,4 +1,5 @@
-Hello <a href="#">Root</a> <a href="#list">List</a>
+Hello {{#name}}{{.}}!{{/name}}
+<nav><a href="#">Root</a> | <a href="#list">List</a></nav>
 <div>
 {{>getComponent(viewName)}}
 </div>

@@ -1,11 +1,17 @@
 import Ractive from 'ractive';
+// routing dependencies
 import wayfarer from 'wayfarer';
 import match from 'hash-match';
-import layoutHtml from './html/index.html';
+
+// fetch shim
 import fetch_shim from 'whatwg-fetch';
+
+// template
+import layoutHtml from './html/index.html';
+
+// views
 import list from './views/list.js';
 import index from './views/index.js';
-import events from './libs/events.js';
 
 // register router
 const router = wayfarer(window.location.hash);
@@ -26,13 +32,19 @@ Ractive.prototype.data = {
 	}
 };
 
+
+// Main view
 export default new Ractive({
+	// selector - where we want our view to rendered
   el : "#app",
+	// template link
   template : layoutHtml,
+	// linked components
   components : {
     list : list,
     index : index
   },
+	// component data object
   data : {
     viewName : 'index'
   },
@@ -45,6 +57,8 @@ export default new Ractive({
     router.on("/list", ()=>{
       this.set("viewName", "list")
     });
+
+		
 
   }
 });

@@ -1,5 +1,6 @@
 import EventEmitter from 'EventEmitter2';
 
+// Emulate event emi
 
 class Events extends EventEmitter {
   constructor() {
@@ -13,9 +14,9 @@ class Events extends EventEmitter {
 
     setInterval(() => {
       this.emit("eventY", {
-        value: Math.floor(Math.random() * 100) + 1
+        value: Math.floor(Math.random() * 200) + 1
       })
-    },1000);
+    },5000);
 
   }
 }
