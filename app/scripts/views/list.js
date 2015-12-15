@@ -9,14 +9,10 @@ fetch('mockdata/devices.json', {
     'Content-Type': 'application/json'
   }
 })
-.then(function(response) {
-  return response.json()
-})
 .then(function(r){
-console.log(r);
-
+  console.log("Success, look what we got:", r;
 },function(r){
-console.log(r);
+  console.log("Failed to fetch it. Here is your error data:", r);
 
 })
 */

@@ -16,6 +16,8 @@ window.addEventListener('hashchange', () => {
 	router(match(window.location.hash));
 });
 
+
+// register dynamic component name
 Ractive.prototype.data = {
 	getComponent: function(name){
 		if (!!this.partials[name]) return name;
