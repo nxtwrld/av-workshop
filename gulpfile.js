@@ -74,7 +74,7 @@ gulp.task('serve', function() {
   $.connect.server({
     root: dist,
     port: port,
-    https : true,
+//    https : true,
     middleware: function (connect, options) {
 
       options.route = '/mockservice';
